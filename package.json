@@ -1,0 +1,27 @@
+{
+  "name": "multi_purpose_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "colors": "^1.4.0",
+    "commando-provider-mongo": "^1.1.1",
+    "discord.js": "^12.2.0",
+    "discord.js-commando": "^0.12.3",
+    "dotenv": "^10.0.0",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.9.24"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@utils": "./commands/utils/",
+    "@schemas": "./schemas/"
+  }
+}

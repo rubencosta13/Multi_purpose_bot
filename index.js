@@ -42,7 +42,6 @@ client.on('ready', () => {
             ['administration', 'administration commands'],
             ['admin', 'administration commands'],
         ])
-        .registerDefaults()
         .registerCommandsIn(path.join(__dirname, 'commands'))
 })
 

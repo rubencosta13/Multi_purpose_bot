@@ -6,7 +6,7 @@ const listOfActivities = [
     "Hi",
     "Hello World"
 ]
-
+// s
 
 for (const activity of listOfActivities) {
 client.user.setActivity(activity, {

@@ -7,7 +7,7 @@ const Discord = require('discord.js')
 
 client.on('channelCreate', async (channel) => {
     await mongo()
-    .then(async (mongoose) =>{
+    .then(async (mongoose) =>{ //she has bf and no sign that they will break up
         try{
             await LogSchema.findOne({_id: channel.guild.id})
             .then(async (result) => {

@@ -29,7 +29,7 @@ client.setProvider(
         console.log(err)
     })
 )
-
+// ??? why did u focus xD?
 client.on('ready', () => {
     console.log('['+"BOT".green+'] Started Successfully')
     

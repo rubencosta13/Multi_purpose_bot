@@ -22,6 +22,7 @@
   "_moduleAliases": {
     "@root": ".",
     "@utils": "./commands/utils/",
-    "@schemas": "./schemas/"
+    "@schemas": "./schemas/",
+    "@translation": "./commands/utils/translation"
   }
 }

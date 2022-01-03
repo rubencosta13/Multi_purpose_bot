@@ -6,6 +6,8 @@ require('dotenv').config()
 const colors = require('colors')
 const config = require('./config.json')
 const path = require('path')
+const { loadLanguages } = require('@translation/translations')
+
 
 const client = new Commando.CommandoClient({
 	partials: ["MESSAGE"],
@@ -43,6 +45,8 @@ client.on('ready', () => {
             ['admin', 'administration commands'],
         ])
         .registerCommandsIn(path.join(__dirname, 'commands'))
+
+        loadLanguages(client)
 })
 
 client.login(process.env.DC_BOT_TOKEN)

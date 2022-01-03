@@ -9,12 +9,13 @@ module.exports = class online extends Commando.Command {
             name: 'set-logs',
             group: 'admin',
             memberName: 'admin',
-            description: 'Sums 2 numbers together',
+            description: 'DISABLED',
             argsType: 'multiple',
             permission: 'ADMINISTRATOR',
         })
     }
     async run(message, args) { //olaaaaaaaaaaaaaaaaaaaaaaa // OLA || i continue dash? // Sure // I almost have a command ready to test 
+        return
         try{
             await mongo()
             .then(async (mongoose) =>{
@@ -50,10 +51,7 @@ module.exports = class online extends Commando.Command {
                 console.log(err)
             })
         }catch(e) {
-// want me to try to make logo?
-// Yeah, and what about name?
-// wait what type of domain will we get for the bot and if u want the 3 euro i got in the paypal i can buy domain
-// when u reply focus me
+
         }
     }
 }

@@ -28,9 +28,9 @@ module.exports = class online extends Commando.Command {
                 "content": "",
                 "embeds": [
                 {
-                    "title": `Buug from: ${guild.id}`,
+                    "title": `Bug from: ${guild.name} [ ${guild.id} ]`,
                     "color": 15158332,
-                    "description": `Bug: ${bug}`,
+                    "description": `Bug: ${bug} `,
                     "timestamp": null,
                     "author": {},
                     "image": {},

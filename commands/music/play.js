@@ -82,7 +82,6 @@ async function execute(message, serverQueue) {
       }
     } else {
       serverQueue.songs.push(song);
-      console.log(message.author)
       const addedToQueue = new Discord.MessageEmbed()
         .setTimestamp()
         .setTitle("Music")

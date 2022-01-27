@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
-    "axios": "^0.20.0",
+    "axios": "^0.21.2",
     "colors": "^1.4.0",
     "commando-provider-mongo": "^1.1.1",
     "discord-player": "^5.1.0",

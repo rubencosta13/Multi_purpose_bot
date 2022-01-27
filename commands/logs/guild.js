@@ -29,7 +29,8 @@ client.on('guildCreate', async (guild) => {
             })
             await translation.save()
             const music = new MusicSchema({
-                _id: guild.id,
+                _id: mongoose.Types.ObjectId(),
+                guildId: guild.id,
                 enabled: false,
             })
             await music.save()

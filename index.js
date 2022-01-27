@@ -29,7 +29,24 @@ client.setProvider(
         console.log(err)
     })
 )
+
+
+
+
+
 client.on('ready', () => {
+    
+    const status = [
+        "Auto Moderation Bot",
+        "Invite me using !invite",
+        "Have a nice day!",
+        "Stay Safe!"
+    ]
+    setInterval(() => {
+        const randomIndex = Math.floor(Math.random() * (status.length - 1) + 1);
+        const newActivity = status[randomIndex];
+        client.user.setActivity(newActivity);
+      }, 10000);
     console.log('['+"BOT".green+'] Started Successfully')
     
 

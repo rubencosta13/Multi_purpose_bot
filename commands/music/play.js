@@ -15,6 +15,7 @@ module.exports = class online extends Commando.Command {
             description: 'Plays music on a voice chat',
             argsType: 'multiple',
             permission: 'ADMINISTRATOR',
+            aliases: ['p', 'tocar', 'music', 'audi']
         })
     }
     async run(message, args) {

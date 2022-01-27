@@ -7,6 +7,7 @@ module.exports = async function isCommandEnabled(schema, guildId) {
         .then(async (result) => {
             if (result === null){
                 const provisoryData = await schema({
+                    _id: mongoose.Types.ObjectId(),
                     guildId: guildId,
                     enabled: false,
                 })

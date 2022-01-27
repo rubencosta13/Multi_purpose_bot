@@ -16,10 +16,9 @@ const client = new Commando.CommandoClient({
 	disableEveryone: false
 })
 
-client.setProvider(
+ client.setProvider(
     MongoClient.connect(process.env.MongoURL, {
         useUnifiedTopology: true,
-        useFindAndModify: true
     })
     .then(client => {
         console.log('['+"DB ".green+'] Started Successfully')

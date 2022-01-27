@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bot": "node index.js",
+    "start": "node index.js",
     "api": "node dashboard/api/app.js"
   },
   "keywords": [],

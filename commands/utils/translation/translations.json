@@ -1,9 +1,62 @@
+
+
+
 {
-    "languages": ["english", "portuguese"],
-    "translations": {
-      "THE_SUM_IS": {
-        "english": "The sum is:",
-        "portuguese": "A soma é:"
-      }
+  "languages": ["english", "portuguese", "greek", "romanian", "dutch", "french"],
+  "translations": {
+    "THE_SUM_IS": {
+      "english": "The sum is:",
+      "portuguese": "A soma é:",
+      "greek": "Το άθροισμα είναι",
+      "romanian": "suma este",
+      "dutch": "de som is"
+    },
+    "COW_FROM:":{
+      "english": "Cow from:",
+      "portuguese": "Vaca do:",
+      "greek": "αγελάδα από: ",
+      "romanian": "vaca din",
+      "dutch": "varken uit ",
+      "french": "cochon de"
+
+    },
+    "PIG_FROM:":{
+      "english": "Pig from:",
+      "portuguese": "Porco do:",
+      "greek": "γουρούνι από",
+      "romanian": "porc din",
+         "dutch": "koe van",
+      "french": "vache de"
+      
+    },
+    "LANGUAGE_DEFINED":{
+      "english": "Language has been defined to: ",
+      "portuguese": "A língua / idioma foi definido para: ",
+      "greek": "Η γλώσσα έχει οριστεί σε",
+      "romanian": "Limbajul a fost definit la",
+      "french" : "La langue a été définie pour",
+      "dutch": "Taal is gedefinieerd om"
+    },
+    "LANGUAGE_NOT_SUPPORTED":{
+      "english": "Language not supported: ",
+      "portuguese": "Esta lingua / idioma não é suportado pelo bot",
+      "greek": "Η γλώσσα δεν υποστηρίζεται",
+      "romanian": "Limba nu este acceptată",
+      "french": "Langue non prise en charge",
+      "dutch": "Taal niet ondersteund"
+
+    },
+    "USER": {
+      "english": "User:",
+      "portuguese": "Membro:"
+    },
+    "GAVE": {
+      "english": "gave",
+      "portuguese": "deu"
+    },
+    "COINS_TO": {
+      "english": "Coins to:",
+      "portuguese": "Moedas a:"
     }
   }
+}

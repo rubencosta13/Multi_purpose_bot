@@ -1,6 +1,0 @@
------------------------------ MAIN PAGE ----------------------------------
-Nav = 5065A8
-Content = 5065A8
-Border around content = 0D005C
-ruben
-i dont have tabnine but it shows that i have it wtf.     is it good? what do it do ? for me it just word auto comple    yeah          I have it   

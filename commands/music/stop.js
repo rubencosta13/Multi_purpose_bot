@@ -9,10 +9,10 @@ const { queue } = require('@utils/music/queue')
 module.exports = class online extends Commando.Command {
     constructor(client) {
         super(client, {
-            name: 'queue',
+            name: 'stop',
             group: 'miscellaneous',
-            memberName: 'queue',
-            description: 'Shows the music queue',
+            memberName: 'stop',
+            description: 'Stops a music',
             argsType: 'multiple',
             permission: 'ADMINISTRATOR',
         })
@@ -24,18 +24,28 @@ module.exports = class online extends Commando.Command {
                 return
             }else{
                 const serverQueue = queue.get(message.guild.id);
-                let songsOnQueue = []
-                for (const songs of serverQueue.songs) {
-                    songsOnQueue.push(songs.title)
-                }
-                const queueEmbed = new Discord.MessageEmbed()
-                    .setTimestamp()
-                    .setDescription(`Songs on queue: \n${songsOnQueue}`)
-                message.reply(queueEmbed)
+                stop(message, serverQueue)
             }
         }catch(e) {
-            console.log(e)
+            
         }
     }
 }
+
+
+function stop(message, serverQueue) {
+    if (!message.member.voice.channel)
+      return message.channel.send(
+        "You have to be in a voice channel to stop the music!"
+      );
+      
+    if (!serverQueue)
+      return message.channel.send("There is no song that I could stop!");
+      
+    serverQueue.songs = [];
+    serverQueue.connection.dispatcher.end();
+}
+              
+                
+                
 

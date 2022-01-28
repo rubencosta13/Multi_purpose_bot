@@ -1,6 +1,6 @@
 require('dotenv').config()
 const mongoose = require("mongoose")
-
+const isLogging = require('./log/log')
 
 module.exports = async () => {
     mongoose.connect(process.env.MongoURL, 
@@ -12,10 +12,11 @@ module.exports = async () => {
         }
     )
     .then(result => {
+        isLogging(result)
         return mongoose
     })
     .catch(err => {
-        console.log(err)
+        console.log(`Error: \n ${err}`)
     })
     return mongoose
 }

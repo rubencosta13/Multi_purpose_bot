@@ -19,7 +19,10 @@ module.exports = class online extends Commando.Command {
     }
     async run(message, args) {
         try{
-            
+            // Use this one ye but the axios.get?
+            //i was planning to use redditmhm
+
+            // oh ok for that use the pig. sorry mate
             axios.get(`https://dog.ceo/api/breeds/image/random`)
             .then(response => {
                 const image = response.data.message

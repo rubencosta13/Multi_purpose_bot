@@ -26,7 +26,7 @@
     "ffmpeg-static": "^4.4.0",
     "fluent-ffmpeg": "^2.1.2",
     "module-alias": "^2.2.2",
-    "mongoose": "^5.9.24",
+    "mongoose": "^6.1.8",
     "opusscript": "^0.0.8",
     "passport": "^0.5.2",
     "passport-discord": "^0.1.4",

@@ -15,7 +15,7 @@ module.exports = class online extends Commando.Command {
             description: 'Plays music on a voice chat',
             argsType: 'multiple',
             permission: 'ADMINISTRATOR',
-            aliases: ['p', 'tocar', 'music', 'audi']
+            aliases: ['p', 'tocar', 'music']
         })
     }
     async run(message, args) {
@@ -24,6 +24,7 @@ module.exports = class online extends Commando.Command {
             if(!isCommandEnabled(MusicSchema, guild.id)){
                 return
             }else{
+                await message.delete()
                 const serverQueue = queue.get(message.guild.id);
                 execute(message, serverQueue)
             }

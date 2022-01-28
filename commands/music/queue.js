@@ -30,7 +30,7 @@ module.exports = class online extends Commando.Command {
                 }
                 const queueEmbed = new Discord.MessageEmbed()
                     .setTimestamp()
-                    .setDescription(`Songs on queue: \n${songsOnQueue}`)
+                    .setDescription(`Songs on queue: \n${songsOnQueue}\n`)
                 message.reply(queueEmbed)
             }
         }catch(e) {

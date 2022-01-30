@@ -12,9 +12,12 @@ module.exports = async function isCommandEnabled(schema, guildId) {
                     enabled: false,
                 })
                 await provisoryData.save()
-                return result.enabled
+                if (!result.enabled === false)return false
+                return true
             }else{
-                return result.enabled
+                console.log(result)
+                if (!result.enabled === false)return false
+                return true
             }
         })
         .catch(err => {

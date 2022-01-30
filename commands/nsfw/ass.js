@@ -20,7 +20,7 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild} = message
-            if(!isCommandEnabled(NSFWSchema, guild.id)){
+            if(isCommandEnabled(NSFWSchema, guild.id)){
                 return
             }else{
                 console.log('fetch')
@@ -34,11 +34,11 @@ module.exports = class online extends Commando.Command {
                     message.reply(embed)          
                 })
                 .catch(err => {
-                    console.log(err)
+                    ErrorHandling(e, guild)
                 })
             }
         }catch(e) {
-            ErrorHandling(e)
+            ErrorHandling(e, guild)
         }
 
     }

@@ -20,7 +20,7 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild} = message
-            if(!isCommandEnabled(NSFWSchema, guild.id)){
+            if(isCommandEnabled(NSFWSchema, guild.id)){
                 return
             }else{
                 axios.get(`https://nekobot.xyz/api/image?type=${this.name}`)
@@ -32,12 +32,12 @@ module.exports = class online extends Commando.Command {
                         .setURL(image)
                     message.reply(embed)          
                 })
-                .catch(err => {
-                    console.log(err)
+                .catch(e => {
+                    ErrorHandling(e, guild)
                 })
             }
         }catch(e) {
-            ErrorHandling(e)
+            ErrorHandling(e, guild)
         }
 
     }

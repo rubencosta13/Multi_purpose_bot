@@ -20,7 +20,7 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild} = message
-            if(!isCommandEnabled(NSFWSchema, guild.id)){
+            if(isCommandEnabled(NSFWSchema, guild.id)){
                 return
             }else{
                 axios.get(`https://nekobot.xyz/api/image?type=${this.name}`)//make it so channel is nsfw idk how 2 make it / i have 2 add the ${this.name} to all of the links????m?????????????????????? mhm
@@ -33,11 +33,11 @@ module.exports = class online extends Commando.Command {
                     message.reply(embed)          
                 })
                 .catch(err => {
-                    console.log(err)
+                    ErrorHandling(err, guild)
                 })
             }
         }catch(e) {
-            ErrorHandling(e)
+            ErrorHandling(e, guild)
         }
 
     }

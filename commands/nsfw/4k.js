@@ -20,7 +20,7 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild} = message
-            if(!isCommandEnabled(NSFWSchema, guild.id)){
+            if(isCommandEnabled(NSFWSchema, guild.id)){
                 return
             }else{
                 console.log("true")
@@ -38,7 +38,7 @@ module.exports = class online extends Commando.Command {
                 })
             }
         }catch(e) {
-            ErrorHandling(e)
+            ErrorHandling(e, guild)
         }
 
     }

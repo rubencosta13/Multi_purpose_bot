@@ -19,10 +19,11 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
 
         try{
+            const { guild } = message
             await message.delete()
             pig(message)
         }catch(e) {
-            ErrorHandling(e)
+            ErrorHandling(e,guild)
         }
         
     }

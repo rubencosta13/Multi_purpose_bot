@@ -65,7 +65,9 @@ client.on('ready', () => {
 })
 
 client.login(process.env.DC_BOT_TOKEN)
+const owner = ['573998055037206540','558684577506525195']
 
 module.exports = {
-    client
+    client,
+    owner
 }

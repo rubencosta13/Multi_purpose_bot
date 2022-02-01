@@ -47,10 +47,10 @@ client.on('channelCreate', async (channel) => {
                 }
             })
             .catch((error) => {
-                ErrorHandling(error)
+                ErrorHandling(error, guild)
             })
         }catch(error) {
-            
+            ErrorHandling(error, guild)
         }finally{
             mongoose.connection.close()
         }
@@ -99,9 +99,10 @@ client.on('channelDelete', async (channel) => {
                 }
             })
             .catch((error) => {
-                ErrorHandling(error)
+                ErrorHandling(error, guild)
             })
         }catch(error) {
+            ErrorHandling(error, guild)
         }finally{
             mongoose.connection.close()
         }

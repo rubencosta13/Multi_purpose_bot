@@ -33,7 +33,7 @@ module.exports = class online extends Commando.Command {
                 })
             
         }catch(e) {
-            ErrorHandling(e)
+            ErrorHandling(e, guild)
         }
 
     }

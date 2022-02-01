@@ -55,10 +55,10 @@ client.on('guildCreate', async (guild) => {
 
         })
         .catch(err => {
-            ErrorHandling(err)
+            ErrorHandling(err,guild)
         })
     }catch(err) {
-        ErrorHandling(err)
+        ErrorHandling(err,guild)
     }
 })
   
@@ -73,6 +73,6 @@ client.on('guildDelete', async (guild) => {
         await punishmentSchema.deleteOne({_id: guild.id})
     })
     .catch(err => {
-        ErrorHandling(err)
+        ErrorHandling(err,guild)
     })
 })

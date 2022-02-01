@@ -21,7 +21,7 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild} = message
-            if(!isCommandEnabled(MusicSchema, guild.id)){
+            if(sCommandEnabled(MusicSchema, guild.id)){
                 return
             }else{
                 await message.delete()
@@ -30,7 +30,7 @@ module.exports = class online extends Commando.Command {
             }
             
         }catch(e) {
-            ErrorHandling(e)
+            ErrorHandling(e,guild)
         }
     }
 }
@@ -78,7 +78,7 @@ async function execute(message, serverQueue) {
         queueContruct.connection = connection;
         play(message.guild, queueContruct.songs[0]);
       } catch (err) {
-        console.log(err);//where do i make???????????????????????// and is it if msg (conatains === 'word') msg.del() msg.reply and the gif link?
+        ErrorHandling(err,guild)
         queue.delete(message.guild.id);
         return message.channel.send(err);
       }

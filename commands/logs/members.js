@@ -25,7 +25,7 @@ client.on('guildMemberAdd', async (member) => {
             )
         })
     }catch(err){
-        ErrorHandling(err)
+        ErrorHandling(err,guild)
     }
 })
 
@@ -48,6 +48,6 @@ client.on('guildMemberRemove', async (member) => {
             )
         })
     }catch(err){
-        ErrorHandling(err)
+        ErrorHandling(err,guild)
     }
 })

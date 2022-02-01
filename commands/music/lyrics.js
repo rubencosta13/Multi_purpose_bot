@@ -20,9 +20,9 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild} = message
-            // if(!isCommandEnabled(MusicSchema, guild.id)){
-            //     return
-            // }else{
+            if(sCommandEnabled(MusicSchema, guild.id)){
+                return
+            }else{
                 const title = args.join('+')
                 const lyrics = await axios.get(`https://some-random-api.ml/lyrics?title=${title}`)
                 .catch(err => {
@@ -35,9 +35,9 @@ module.exports = class online extends Commando.Command {
                     .setDescription(lyrics.data.lyrics)
                     .setImage(lyrics.data.thumbnail.genius)
                 await message.channel.send({embed: embed})
-            // }
+            }
         }catch(e) {
-            ErrorHandling(e)
+            ErrorHandling(e,guild)
         }
 
     }

@@ -9,10 +9,10 @@ const NSFWSchema = require('@schemas/nsfw-schema')
 module.exports = class online extends Commando.Command {
     constructor(client) {
         super(client, {
-            name:'invite',
+            name:'help',
             group: 'misc',
-            memberName: 'invites the bot',
-            description: 'invites the bot',
+            memberName: 'help',
+            description: 'help',
             argsType: 'multiple',
             permission: 'ADMINISTRATOR',
         })
@@ -20,10 +20,19 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild} = message
-            message.reply(`Invite me using: https://discord.com/api/oauth2/authorize?client_id=830449351292878888&permissions=8&scope=bot`)
+            message.reply(`
+            Commands:
+            ***moderation:***
+            **!kick** kicks member from the guild
+            
+            `)
         }catch(e) {
             ErrorHandling(e ,guild)
         }
 
     }
 }
+
+// On this bot you have like 10 seconds to type the command
+// Bc it is not created on the database
+// But on the main, it is created on the database. Making this bot for developing purposes onlyn

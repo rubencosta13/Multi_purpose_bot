@@ -20,7 +20,7 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild, channel} = message
-            if(!isCommandEnabled(LanguageSchema, guild.id)){
+            if(sCommandEnabled(LanguageSchema, guild.id)){
                 return
             }else{  
                 if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("You need to be an administrator in order to run this command")

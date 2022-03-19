@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 const isLogging = require('./log/log')
 
 module.exports = async () => {
+    mongoose.set('useCreateIndex', true)
     mongoose.connect(process.env.MongoURL, 
         {
             useNewUrlParser: true,

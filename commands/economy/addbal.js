@@ -19,7 +19,7 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild, channel} = message
-            if(sCommandEnabled(EconomySchema, guild.id)){
+            if(!isCommandEnabled((EconomySchema, guild.id))){
                 return
             }else{
                 if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("No permission")

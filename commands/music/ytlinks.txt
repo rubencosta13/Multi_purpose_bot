@@ -1,0 +1,7 @@
+https://www.youtube.com/watch?v=FSYV-JmrGpw&ab_channel=Planetarium
+
+
+GET https://youtube.googleapis.com/youtube/v3/search?part=Break%20even&key=[YOUR_API_KEY] HTTP/1.1
+
+Authorization: Bearer [YOUR_ACCESS_TOKEN]
+Accept: application/json

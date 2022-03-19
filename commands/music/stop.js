@@ -20,7 +20,7 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild} = message
-            if(sCommandEnabled(MusicSchema, guild.id)){
+            if(!isCommandEnabled((MusicSchema, guild.id))){
                 return
             }else{
                 const serverQueue = queue.get(message.guild.id);

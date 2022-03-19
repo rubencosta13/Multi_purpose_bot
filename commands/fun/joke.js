@@ -20,7 +20,7 @@ module.exports = class online extends Commando.Command {
             await superagent
                 .get('http://icanhazdadjoke.com/')
                 .set('Accept', 'application/json')
-		        .end((err, response) => {
+                .end((err, response) => {
                 const embed = new Discord.MessageEmbed()
                     .setTitle(`Joke`)
                     .setColor('RANDOM')   

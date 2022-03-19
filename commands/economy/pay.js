@@ -19,7 +19,7 @@ module.exports = class online extends Commando.Command {
     async run(message, args) {
         try{
             const {guild} = message
-            if(sCommandEnabled(EconomySchema, guild.id)){
+            if(!isCommandEnabled((EconomySchema, guild.id))){
                 console.log("False")
                 return
             }else{
